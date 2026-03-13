@@ -1,0 +1,2060 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  background: #f7f7f7;
+  color: #222;
+  
+}
+
+/* ===== HERO HEADER PRO ===== */
+header {
+  position: relative;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("fondo.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 520px;
+  width: 100%;
+}
+
+
+/* LOGO CIRCULAR PRO */
+.logo-container {
+  width: 260px;
+  height: auto;
+  margin: 0 auto 35px;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.logo-container img {
+  width: 100%;
+  filter:
+    drop-shadow(0 0 25px rgba(201,164,76,0.65))
+    drop-shadow(0 10px 40px rgba(0,0,0,0.9));
+}
+
+
+/* TEXTO */
+header h1 {
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.microcopy {
+  margin-top: 16px;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+/* BOTÓN */
+.btn {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 14px 34px;
+  background: #c9a44c;
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 10px 22px rgba(201,164,76,0.45);
+  position: relative;
+  z-index: 10;
+}
+
+/* RESPONSIVE EXTREMO */
+@media (max-width: 480px) {
+  .logo-container {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* ===== SECTIONS ===== */
+.section {
+padding: 80px 10%;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+gap: 28px;
+max-width:1200px;
+margin:auto;
+
+
+}
+.section-title{
+font-size:36px;
+margin-bottom:10px;
+text-align:center;
+color:#222;
+font-weight:600;
+}
+
+.section-title::after{
+content:"";
+display:block;
+width:60px;
+height:3px;
+background:#c9a96a;
+margin-top:8px;
+}
+.section{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+}
+
+.section .card{
+margin-bottom:25px;
+}
+
+
+
+.section-grid {
+ display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+  .section-title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  .section:nth-of-type(1){
+  background:#faf7f3;
+  grid-column: 1 / -1;
+  text-align:center;
+  margin-bottom:30px;
+  color:#222;   /* IMPORTANTE */
+  
+}
+
+
+.section:nth-of-type(2){
+  background:#ffffff;
+}
+
+.section:nth-of-type(3){
+  background:#f5f5f5;
+}
+
+/* subtitulo */
+.section-subtitle{
+  grid-column:1 / -1;
+  text-align:center;
+  color:#777;
+  font-size:15px;
+  margin-top:-10px;
+  margin-bottom:30px;
+}
+
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #c9a44c;
+  margin-top: 6px;
+}
+
+/* CARDS */.card{
+background:white;
+border-radius:18px;
+padding:28px;
+/* ===============================
+   FIX GRID SERVICIOS
+================================ */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+width:100%;
+max-width:1200px;
+margin:auto;
+}
+
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+grid-column:1 / -1;
+text-align:center;
+margin-bottom:40px;
+}
+
+/* evitar overflow horizontal */
+body{
+overflow-x:hidden;
+}
+
+/* responsive tarjetas */
+.card{
+width:100%;
+}
+
+/* móvil */
+@media(max-width:768px){
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.section{
+padding:60px 20px;
+}
+
+}
+
+
+transition:all .35s ease;
+position:relative;
+overflow:hidden;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,0.18);
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:6px;
+color:#222;
+}
+
+.card p{
+color:#666;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.price{
+font-size:22px;
+font-weight:700;
+color:#c9a96a;
+}
+/* FOOTER */
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding:60px 20px 90px;
+  font-size: 14px;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  margin: 0 8px;
+  color: #c9a44c;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* BOTTOM BAR */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  padding: 12px;
+  text-align: center;
+  z-index: 100;
+}
+
+.bottom-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+
+}
+
+.brand-logo img{
+  max-width: 380px;
+}
+
+.brand-logo::after{
+  inset:-60px;
+  filter:blur(35px);
+
+}
+/* === CTA ANIMADO PREMIUM === */
+.btn {
+  animation: pulseGold 2.5s infinite;
+}
+
+@keyframes pulseGold {
+  0%   { transform: scale(1); box-shadow: 0 10px 22px rgba(201,164,76,0.45); }
+  50%  { transform: scale(1.05); box-shadow: 0 15px 35px rgba(201,164,76,0.75); }
+  100% { transform: scale(1); }
+}
+
+/* =====================
+   TOOLTIP SPA PREMIUM - MASAJES (FIX REAL)
+   ===================== */
+
+/* =====================
+   ICONOS SOCIALES PREMIUM
+   ===================== */
+
+.social-icons {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-icons a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #c9a44c; /* dorado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a44c;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.35s ease;
+}
+
+.social-icons a:hover {
+  background: #c9a44c;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(201,164,76,0.45);
+}
+
+
+p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* ===== PROMO CAROUSEL ===== */
+.promo-card {
+  background: #fff;
+  border: 2px solid #c9a44c;
+  border-radius: 18px;
+  padding: 26px 22px;
+  max-width: 360px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+  line-height: 1.4;
+    
+
+}
+
+/* TÍTULO */
+.promo-card h2 {
+  font-size: 1.35rem;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+    color: #1161;
+
+}
+
+/* CADA PROMO */
+.promo-item {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.promo-item:last-of-type {
+  border-bottom: none;
+}
+
+/* NOMBRE */
+.promo-item h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: black ;
+}
+
+/* DESCRIPCIÓN */
+.promo-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* PRECIO */
+.promo-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* TEXTO EXTRA */
+.promo-extra {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* LOTO */
+.loto {
+  margin: 22px auto 10px;
+  font-size: 26px;
+  color: #c9a44c;
+  opacity: 0.85;
+}
+
+/* BOTÓN */
+.promo-card button {
+  margin-top: 14px;
+  padding: 12px 26px;
+  background: #c9a44c;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== PROMO OVERLAY ===== */
+#promo-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75
+  );
+  
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carrusel de fondo */
+.carousel-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.carousel-bg img.active {
+  opacity: 1;
+}
+
+/* Oscurecer un poco para que el logo se lea bien */
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+/* Asegurar que el contenido del header quede arriba */
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+.carousel-bg img {
+  opacity: 0;
+  animation: carouselFade 15s infinite;
+}
+
+.carousel-bg img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.carousel-bg img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.carousel-bg img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes carouselFade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.promo-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 22px;
+  background: #000;
+  color: #c9a44c;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.promo-btn:hover {
+  background: #c9a44c;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(201,164,76,0.45);
+}
+
+
+
+
+@keyframes heartBeat {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.15); }
+  40%  { transform: scale(1); }
+  60%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.valentine-text {
+  font-size: 0.8rem;
+  letter-spacing: 1.2px;
+  font-weight: 300;
+  color: #c9a44c;
+  margin-top: -14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+@media (max-height: 720px) {
+  .promo-card {
+    transform: scale(0.92);
+  }
+}
+
+@media (max-height: 640px) {
+  .promo-card {
+    transform: scale(0.88);
+  }
+}
+
+@media (max-height: 580px) {
+  .promo-card {
+    transform: scale(0.82);
+  }
+      }.promo-card {
+  position: relative;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-image: url("img/promo-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* OVERLAY */
+#promo-overlay {
+  position: fixed;
+  inset: 0;
+  background-image: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* TARJETA */
+.promo-card {
+  position: relative;
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 18px;
+  background-image: url("img/zen-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+/* CAPA BLANCA ELEGANTE */
+.promo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.88);
+  z-index: 1;
+}
+
+/* CONTENIDO */
+.promo-card * {
+  position: relative;
+  z-index: 2;
+  color: #f2f5f3;
+
+}
+/* TITULO */
+.promo-card h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f2f5f3;
+
+}
+
+/* TEXTO AMOR */
+.valentine-text {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* ITEMS */
+.promo-item {
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+.promo-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("img/zen-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.promo-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* PRECIOS */
+.promo-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #b9c7c0;
+  margin: 6px 0;
+}
+
+/* BOTÓN */
+.promo-btn {
+  display: inline;
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: #000;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* CORAZÓN */
+.heart {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #b89b4f;
+  margin: 10px 0;
+}
+
+/* BOTÓN CERRAR */
+.promo-card button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.promo-card {
+  animation: bgMove 20s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove {
+  from { background-position: center top; }
+  to { background-position: center bottom; }
+}
+      
+
+/* Fondo oscuro alrededor */
+.promo-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Contenedor del popup */
+.promo-popup {
+  background-image:url("img/amor1.jpg") ;
+    background-size: cover;        /* Ajusta la imagen al contenedor */
+  background-position: center;   /* Centra la parte importante */
+  backdrop-filter: blur(6px);
+  width: 90%;
+  max-width: 420px;
+  max-height: 80vh;              /* 👈 clave para el scroll */
+  border-radius: 20px;
+  overflow-y: auto;              /* 👈 scroll interno */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  animation: slideUp 0.5s ease;
+  position: relative;
+}
+
+/* Header donde va la X */
+.promo-header {
+  position: sticky;              /* 👈 magia */
+  top: 0;
+  background: rgba(20, 20, 20, 0.95);
+  padding: 14px 18px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Botón cerrar */
+.promo-close {
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.promo-close:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+/* Contenido */
+.promo-content {
+  padding: 10px 22px 28px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* BOTÓN VER PROMOCIONES */
+
+/* CONTENEDOR CENTRADO */
+.promo-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+
+/* BOTÓN PROMOCIONES */
+.promo-trigger {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(145deg, #2b2b2b, #1a1a1a);
+  color: #d9d9d9 !important; /* fuerza gris perla */
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none !important; /* quita subrayado */
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Hover elegante */
+.promo-trigger:hover {
+  background: linear-gradient(145deg, #3a3a3a, #222);
+  color: #ffffff !important;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* Click */
+.promo-trigger:active {
+  transform: scale(0.96);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+
+}
+
+/* =========================
+   NAVBAR SPA DE LUJO
+========================= */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+z-index:999;
+
+background:rgba(255,255,255,255);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(212,175,55,0.3);
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+letter-spacing:2px;
+color:#8c6f3f;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+letter-spacing:1px;
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-4px;
+background:#d4af37;
+transition:0.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.btn-reserva{
+padding:10px 20px;
+background:#d4af37;
+border:none;
+border-radius:30px;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-reserva:hover{
+background:#b8962f;
+transform:translateY(-2px);
+}
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #111, #333);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: plate;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.servicios-section {
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+
+-------------------------------------03/03 2026
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #0f0f0f 0%, #1b1b1b 100%);
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #d4af37;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+.services-container{
+  background: linear-gradient(
+    rgba(255,255,255,0.92),
+    rgba(255,255,255,0.92)
+  ),
+  url("/spa-bg.jpg");
+  
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+  .service-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+.service-card h3 {
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.service-card li {
+  margin-bottom: 12px;
+  color: #f1f1f1;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+
+.price {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #b89b4f;
+}
+
+.tooltip {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.facial-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #999;
+}
+
+.promo-center {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.promo-trigger {
+  color: #b89b4f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.promo-trigger:hover {
+  text-decoration: underline;
+}
+
+.section-subtitle {
+  max-width: 600px;
+  margin: 10px auto 40px;
+  font-size: 15px;
+  color: #bdbdbd;
+  line-height: 1.6;
+}
+
+.map-container {
+  max-width: 1000px;
+  margin: 40px auto 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.google-link {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.google-link a {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 1px solid #b89b4f;
+  color: #b89b4f;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.google-link a:hover {
+  background: #b89b4f;
+  color: black;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+
+.horarios {
+  margin-top: 40px;
+  text-align: center;
+  color: black;
+}
+
+.horarios h3 {
+  margin-bottom: 15px;
+  color: #b89b4f;
+}
+
+.footer {
+  background: #0a0a0a;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer p {
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  margin: 0 15px;
+  color: #b89b4f;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FONDO OSCURO */
+#promo-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.4s ease;
+}
+
+/* POPUP */
+.promo-popup {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  animation: slideUp 0.4s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* BOTÓN CERRAR */
+.promo-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* TITULOS */
+.promo-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.promo-subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* CARD */
+.promo-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.promo-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.promo-price {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #c49a6c;
+}
+
+/* BOTON */
+.promo-btn {
+  display: inline-block;
+  background: #c49a6c;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.promo-btn:hover {
+  background: #a67c52;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* OVERLAY CON IMAGEN Y OSCURECIDO */
+#promo-overlay {
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("/img/relajacion1.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeInOverlay 0.6s ease;
+  backdrop-filter: blur(3px);
+}
+
+/* POPUP GLASS */
+.promo-popup {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 50px 40px;
+  border-radius: 25px;
+  width: 95%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  animation: luxuryEntrance 0.7s cubic-bezier(.22,1,.36,1);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  color: white;
+}
+
+/* TITULO */
+.promo-popup h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* SUBTEXTO */
+.valentine-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* ITEMS */
+.promo-item {
+  background: rgba(255,255,255,0.08);
+  padding: 18px;
+  border-radius: 15px;
+  margin-bottom: 18px;
+  transition: 0.3s ease;
+}
+
+.promo-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.15);
+}
+
+/* TITULO ITEM */
+.promo-item h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* PRECIO */
+.promo-price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #f3d19c;
+}
+
+/* BOTON */
+.promo-btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #c49a6c, #f3d19c);
+  color: #000;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.promo-btn:hover {
+  transform: scale(1.05);
+}
+
+/* BOTON CERRAR */
+.promo-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  border: none;
+  background: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ANIMACIONES */
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes luxuryEntrance {
+  from {
+    transform: scale(0.8) translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.schedule {
+  color: #333;
+  font-weight: 500;
+}
+
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+/* ===============================
+   FIX GRID SERVICIOS
+================================ */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+width:100%;
+max-width:1200px;
+margin:auto;
+}
+
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+grid-column:1 / -1;
+text-align:center;
+margin-bottom:40px;
+}
+
+/* evitar overflow horizontal */
+body{
+overflow-x:hidden;
+}
+
+
+
+/* móvil */
+@media(max-width:768px){
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.section{
+padding:60px 20px;
+}
+
+}
+/* =========================
+   NAVBAR SPA DE LUJO
+========================= */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-evenly;
+align-items:center;
+padding:18px 20px;
+z-index:999;
+
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(212,175,55,0.3);
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+letter-spacing:2px;
+color:#8c6f3f;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+letter-spacing:1px;
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-4px;
+background:#d4af37;
+transition:0.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.btn-reserva{
+padding:10px 20px;
+background:#d4af37;
+border:none;
+border-radius:30px;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-reserva:hover{
+background:#b8962f;
+transform:translateY(-2px);
+}
+
+
+-----------------------------------------
+
+
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+
+
+-----------------------------------------------
+
+/* CONTENEDOR DE CADA SECCION */
+
+.services-container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* GRID RESPONSIVE */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+margin-top:30px;
+}
+
+/* TARJETAS */
+/* CONTENEDOR FLIP */
+
+.card{
+perspective:1000px;
+height:220px;
+cursor:pointer;
+}
+
+.card-inner{
+position:relative;
+width:100%;
+height:100%;
+text-align:center;
+transition:transform .6s;
+transform-style:preserve-3d;
+}
+
+.card:hover .card-inner{
+transform:rotateY(180deg);
+}
+
+/* CARAS */
+
+.card-front,
+.card-back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:14px;
+padding:26px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* FRENTE */
+
+.card-front{
+background:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* ATRÁS */
+
+.card-back{
+background:#1e1e1e;
+color:white;
+transform:rotateY(180deg);
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:12px;
+}
+
+/* BOTON CITA */
+
+.book-btn{
+background:#c9a45c;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:30px;
+cursor:pointer;
+font-weight:500;
+transition:.3s;
+}
+
+.book-btn:hover{
+background:#b8934f;
+}
+
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 40px;
+transition:.4s;
+z-index:999;
+}
+
+.navbar.scrolled{
+background:white;
+box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
+
+.nav-links a{
+color:black;
+font-weight:500;
+}
+
+
+.hero {
+
+height:100vh;
+
+background-image:url("/spa-bg.jpg");
+
+background-size:cover;
+background-position:center;
+
+background-attachment:fixed;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+color:white;
+
+position:relative;
+
+}
+
+.hero::before{
+
+content:"";
+position:absolute;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+}
+
+.hero-content{
+
+position:relative;
+z-index:2;
+
+}
+
+
+
+.testimonios{
+
+padding:80px 20px;
+background:#fafafa;
+
+}
+
+.testimonials-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+max-width:1100px;
+margin:auto;
+
+}
+
+.testimonial-card{
+
+background:white;
+padding:30px;
+
+border-radius:12px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+text-align:center;
+
+}
+
+.stars{
+
+color:#d4af37;
+font-size:20px;
+margin-bottom:10px;
+
+}
+
+
+.hero{
+
+position:relative;
+height:100vh;
+overflow:hidden;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+color:white;
+
+}
+
+.hero-video{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+}
+
+.hero-content{
+
+position:relative;
+z-index:2;
+
+}
+
+.hero-logo{
+
+width:160px;
+margin-bottom:20px;
+
+}
+
+
+.testimonios{
+
+padding:80px 20px;
+
+background:#fafafa;
+
+text-align:center;
+
+}
+
+.testimonial-slider{
+
+max-width:600px;
+margin:auto;
+
+font-size:20px;
+line-height:1.6;
+
+}
+
+.review-name{
+
+display:block;
+
+margin-top:15px;
+
+font-weight:600;
+
+color:#888;
+
+ }
+
+
+.whatsapp-button{
+
+position:fixed;
+
+bottom:25px;
+right:25px;
+
+width:60px;
+height:60px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:28px;
+
+color:white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+z-index:999;
+
+transition:transform .2s;
+
+}
+
+.whatsapp-button:hover{
+
+transform:scale(1.1);
+
+}
+
+.navbar{
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+background:white;
+
+}
+
+
+
+-------------------------------
+
+
+.navbar{
+
+position:fixed;
+top:0;
+width:100%;
+
+padding:20px 40px;
+
+transition:all .3s ease;
+
+z-index:1000;
+
+}
+
+.navbar-scrolled{
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.nav-container{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+}
+
+.logo{
+
+height:55px;
+
+}
+
+.nav-links{
+
+display:flex;
+gap:30px;
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:#222;
+
+font-weight:500;
+
+}
+
+
+
+.service-card{
+
+background:rgba(255,255,255,0.25);
+
+backdrop-filter:blur(15px);
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,0.3);
+
+padding:25px;
+
+transition:all .3s;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+}
+
+.service-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
+}
+
+
+.whatsapp-button{
+
+position:fixed;
+
+bottom:25px;
+right:25px;
+
+width:60px;
+height:60px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+color:white;
+
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+z-index:999;
+
+}
+
+
+.parallax{
+
+background-image:url("img/masaje1");
+
+background-attachment:fixed;
+
+background-size:cover;
+
+background-position:center;
+
+height:400px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+font-size:32px;
+
+}
